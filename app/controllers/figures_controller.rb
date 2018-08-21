@@ -7,7 +7,6 @@ class FiguresController < ApplicationController
   post '/figures' do
     figure = Figure.create(name: params["figure"]["name"])
     if params["figure"]["title_ids"] != nil
-      binding.pry
       params["figure"]["title_ids"].each do |id|
         figure.titles << Title.find_by_id(id)
       end
