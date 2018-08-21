@@ -6,5 +6,10 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     figure = Figure.create(name: params["figure"]["name"])
+    if params["figure"]["title_ids"] != nil
+      params["figure"]["title_ids"].each do |id|
+        figure.titles << 
+      end
+    end
   end
 end
