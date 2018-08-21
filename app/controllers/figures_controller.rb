@@ -12,7 +12,6 @@ class FiguresController < ApplicationController
       end
     end
     if params["figure"]["landmark_ids"] != nil
-      binding.pry
       params["figure"]["landmark_ids"].each do |id|
         figure.titles << Landmark.find_by_id(id)
       end
