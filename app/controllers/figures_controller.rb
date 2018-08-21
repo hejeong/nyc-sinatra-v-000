@@ -13,7 +13,7 @@ class FiguresController < ApplicationController
     end
     if params["figure"]["landmark_ids"] != nil
       params["figure"]["title_ids"].each do |id|
-        figure.titles << Title.find_by_id(id)
+        figure.titles << Landmark.find_by_id(id)
       end
     end
   end
