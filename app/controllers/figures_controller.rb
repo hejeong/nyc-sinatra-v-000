@@ -8,7 +8,7 @@ class FiguresController < ApplicationController
     figure = Figure.create(name: params["figure"]["name"])
     if params["figure"]["title_ids"] != nil
       params["figure"]["title_ids"].each do |id|
-        figure.titles << 
+        figure.titles << Title.find_by_id(id)
       end
     end
   end
