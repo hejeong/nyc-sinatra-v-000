@@ -11,5 +11,10 @@ class FiguresController < ApplicationController
         figure.titles << Title.find_by_id(id)
       end
     end
+    if params["figure"]["landmark_ids"] != nil
+      params["figure"]["title_ids"].each do |id|
+        figure.titles << Title.find_by_id(id)
+      end
+    end
   end
 end
