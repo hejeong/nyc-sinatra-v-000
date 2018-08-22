@@ -50,7 +50,6 @@ class FiguresController < ApplicationController
     else
       @figure.titles << Title.create(params["title"])
     end
-
     if params["figure"]["landmark_ids"] != nil
       params["figure"]["landmark_ids"].each do |id|
         @figure.landmarks << Landmark.find_by_id(id)
