@@ -2,7 +2,7 @@
   <label>Name: </label>
   <input id="landmark_name" type="text" name="landmark[name]">
   <br>
-  <h3>Titles</h3>
+  <h3>Figure</h3>
   <% Title.all.each do |title|%>
     <input id="title_<%=title.id%>" type="checkbox" name="figure[title_ids][]" value="<%= title.id %>"><%= title.name %></input>
     <br>
