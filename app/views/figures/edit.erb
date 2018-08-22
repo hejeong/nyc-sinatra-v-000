@@ -5,14 +5,15 @@
   <h3>Titles</h3>
   <% Title.all.each do |title|%>
     <input id="title_<%=title.id%>" type="checkbox" name="figure[title_ids][]" value="<%= title.id %>"
-    <%= 'checked' if %>><%= title.name %></input>
+    <%= 'checked' if @figure.titles.include?(title)%>><%= title.name %></input>
     <br>
   <% end %>
   <h3>Create New Title:</h3>
   <input id="new_title" type="text" name="title[name]">
   <h3>Landmarks</h3>
   <% Landmark.all.each do |landmark| %>
-    <input id="landmark_<%= landmark.id %>"type="checkbox" name="figure[landmark_ids][]" value="<%= landmark.id %>"><%= landmark.name %></input>
+    <input id="landmark_<%= landmark.id %>"type="checkbox" name="figure[landmark_ids][]" value="<%= landmark.id %>"
+    ><%= landmark.name %></input>
     <br>
   <% end %>
   <h3>Create New Landmark:</h3>
