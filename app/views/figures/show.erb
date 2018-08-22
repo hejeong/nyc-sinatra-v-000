@@ -2,6 +2,6 @@
 <h3>Titles:</h3>
 <ul>
   <% @figure.titles.each do |title|%>
-    <li><a href="/titles/<%= %>"></a></li>
+    <li><a href="/titles/<%= title.id %>"></a></li>
   <% end %>
 </ul>
