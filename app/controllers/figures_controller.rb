@@ -25,6 +25,6 @@ class FiguresController < ApplicationController
 
   get '/figures' do
     @figures = Figure.all
-    erb :'figure/new'
+    erb :'figures/new'
   end
 end
