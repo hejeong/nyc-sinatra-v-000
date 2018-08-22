@@ -17,6 +17,8 @@ class FiguresController < ApplicationController
       params["figure"]["landmark_ids"].each do |id|
         figure.landmarks << Landmark.find_by_id(id)
       end
+    else
+      figure.landmarks << Landmark.create(params["landmark"])
     end
   end
 end
