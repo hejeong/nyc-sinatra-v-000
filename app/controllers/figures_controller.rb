@@ -42,6 +42,8 @@ class FiguresController < ApplicationController
   patch '/figures/:id' do
     @figure = Figure.find_by_id(params[:id])
     @figure.update(name: params["figure"]["name"])
+    @figure.titles.clear
+    @figure.landmarks.clear
     if params["figure"]["title_ids"] != nil
       params["figure"]["title_ids"].each do |id|
         @figure.titles << Title.find_by_id(id)
