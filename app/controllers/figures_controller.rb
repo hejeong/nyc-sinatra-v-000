@@ -23,4 +23,3 @@ class FiguresController < ApplicationController
     @figure.save
   end
 end
-
