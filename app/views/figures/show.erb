@@ -8,6 +8,6 @@
 <h3>Landmarks:</h3>
 <ul>
   <% @figure.landmarks.each do |landmark|%>
-    <li><a href="/titles/<%= landmark.id %>"><%= title.name %></a></li>
+    <li><a href="/titles/<%= landmark.id %>"><%= landmark.name %></a></li>
   <% end %>
 </ul>
