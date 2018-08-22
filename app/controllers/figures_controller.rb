@@ -57,7 +57,6 @@ class FiguresController < ApplicationController
         @figure.landmarks << Landmark.find_by_id(id)
         binding.pry
       end
-    else
       @figure.landmarks << Landmark.create(params["landmark"])
     end
     @figure.save
