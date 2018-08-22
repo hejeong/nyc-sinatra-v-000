@@ -1,7 +1,7 @@
 <h1><%= @figure.name %></h1>
 <h3>Titles:</h3>
 <ul>
-  <% @figure.titles.each do %>
-
+  <% @figure.titles.each do |title|%>
+    <li><a href="/titles/<%= %>"></a></li>
   <% end %>
 </ul>
