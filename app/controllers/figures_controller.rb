@@ -22,4 +22,9 @@ class FiguresController < ApplicationController
     end
     @figure.save
   end
+
+  get '/figures' do
+    @figures = Figure.all
+    erb :'figures/new'
+  end
 end
